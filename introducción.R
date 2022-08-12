@@ -52,4 +52,27 @@ estatura
 estatura<- 1.72
 estatura
 
+## Estructuras de datos
+
+# vector: Contienen datos del mismo tipo, son atomicos, no se pueden mezclar lo datos que posee
+vector_1 <- c(1, 2, 3, 4, 5)
+is.vector(vector_1)
+length(vector_1)
+
+vector_2 <- c("humero", "randio", "ulna", "femur", "tibia", "fibula")
+is.vector(vector_2)
+length(vector_2)
+
+
+# podemos hacer operaciones con los vectores
+v_3 <- c(1, 2, 3)
+v_4<- c(4, 5, 6)
+
+vector_3 <- c(v_3, v_4) # unir dos vectores
+vector_3 <- v_3 + v_4 # suma de vectores
+vector_3 <- v_3 - v_4 # resta de vectores
+# resultado
+vector_3
+
+
 
