@@ -42,8 +42,14 @@ class("uno")
  4 > 3 # mayor que
  4 >= 3 # mayor o igual
  4 == 3 # igual
- != # no es igual, distinto de
+ 4 != 3 # no es igual, distinto de
    
  
- 
+ # Operaciones de asignación
+   
+estatura <- 1.73
+estatura
+estatura<- 1.72
+estatura
+
 
