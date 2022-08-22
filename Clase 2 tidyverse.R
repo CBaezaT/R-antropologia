@@ -43,5 +43,24 @@ str(iris)
 iris_t <- as_tibble(iris)
 iris_t
 str(iris_t)
+?str()
+
+# entonces si queremos manejar y transformar bases de datos (data wrangling & data transformation )
+# el paquete dplyr y tidyr son nuestras herramientas:
+
+iris_t
+glimpse(iris_t) # lo mismo que str  
+?glimpse()
+view(iris_t) # se dan cuenta que ya no es necesario usar View() con mayuscula?
+
+arrange(iris_t,Sepal.Length ) # cambiar orden ascendente desde Sepal.Length
+iris_t
+arrange(iris_t,desc(Sepal.Length )) # cambiar orden descendente desde Sepal.Length
+iris_t
+# Si revisan despues de aplicar la función, iris_t no cambia...
+# esto es porque debemos guardas el cambio, y eso se hace..
+iris_arrange<- arrange(iris_t,Sepal.Length )
+iris_arrange
+
 
 
