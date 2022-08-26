@@ -55,3 +55,4 @@ galton <- mutate(galton, midparentHeight = round(midparentHeight*2.54, digits = 
 galton <- mutate(galton, childHeight = round(childHeight*2.54, digits = 2))
 
 
+
