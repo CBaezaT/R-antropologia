@@ -241,7 +241,7 @@ murders<- tibble(murders)
 # crea la variable population_in_millions que contenga la población en millones
 
 
-  # resultado #####
+# resultado #####
 
 
 population_in_millions <- murders$population/10^6
@@ -253,7 +253,7 @@ murders <- murders %>% mutate(population_in_millions = population/10^6)
 
 # Crea un histograma con la variable population_in_millions #####
 
-  # resultado #####
+# resultado #####
 
 x <- with(murders,  population / 1000000)
 x <- population_in_millions
@@ -268,7 +268,11 @@ hist(with(murders, population_in_millions))
 with(murders, hist(population_in_millions))
 
 
+
+
+
 ##### seguimos #####
+
 
 
 # Recordar, hay varias formas de obtener un mismo resultado en R
@@ -292,62 +296,39 @@ p_i_m <- log10(murders$population_in_millions)
 plot(p_i_m, t_g_m)
 
 
+# Actividad
+
 # Ahora usando dplyr filtra los estados que tengan población menor a 5 millones
 
 
 # pistas: usar funciones de dplyr, cada observación es un estado
 
-# resultado #####
-m_m<-  murders %>% filter( population_in_millions <= 5)
+# resultado 
 
-m_m
 
 
 # Ahora, crea un grafico scatterplot entre population_in_millions y total
 plot(m_m$population_in_millions, m_m$total)
 
 # crea un histograma de rate
-hist(m_m$rate)
+
 
 # crea un boxplot de rate y region
- boxplot(m_m$rate~m_m$region,
-        xlab = "región",
-        ylab = "Tasa",
-        main = "Asesinatos EEUU")
+
 
 
 # calcula el los estadisticos basicos con summary 
 # crea un objeto llamado tab_2 que contenga las variables "population", "total", "rate"
 # Basate en el ejemplo de la clase!!
- summary(m_m)
-tab_2 
-resumen <-c("population", "total", "rate")
 
-res_population <- summary(m_m$population)
-res_total <- summary(m_m$total)
-res_rate <- summary(m_m$rate)
-tab_2 <- as.data.frame(rbind(as.numeric(res_population)))
-tab_2 <- rbind(tab_2, as.numeric(res_total), as.numeric(res_rate))
-colnames(tab_2) <- names(res_population) # cambiamos los colnames a los estadisticos
-tab_2<-round(tab_2, digits = 2)
 
-tab_2 <- cbind(resumen, tab_2 )
-
-tab_2
 
 # luego ordenalas en orden decreciente y selecciona solo las 5 muestras (Estados) con mayor población
 # crea un subset con esa selección
 
-m_m <- arrange(m_m, desc(population_in_millions))
-m_m5 <- slice(m_m, 1:5)
-m_m5
+
 
 
 # Crea un grafico de barras o barplot de rate x estado 
 
-barplot( m_m5$rate, names.arg = m_m5$state,
-         main = "Estados", xlab = "Estado", ylab = "Frecuencia")
-
-
-
-
+barplot()
