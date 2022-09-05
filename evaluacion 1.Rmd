@@ -1,0 +1,88 @@
+---
+title: "Evaluación 1"
+output: html_notebook
+---
+
+# Análisis de datos en R para antropología
+
+### Paquetes a utilizar
+
+```{r, echo=TRUE, include=TRUE}
+library(tidyverse)
+library(dslabs)
+library(HistData)
+```
+
+### R basico: Objetos
+
+-   Crea un vector númerico de un largo de 10 y crea un vector de caracteres de largo 10 (pueden ser letras)
+
+    ```{r}
+    vector_1<- 1
+      
+    vector_2 <- 1
+
+    ```
+
+-   Crea una matriz
+
+    ```{r}
+    1
+    ```
+
+-   Crea un dataframe
+
+    ```{r}
+    1
+    ```
+
+¿Cuál es la principal diferencia entre una matriz (matrix) y un dataframe?
+
+> Respuesta aquí
+
+------------------------------------------------------------------------
+
+### Procesos
+
+-   Crea un vector númerico de un largo de 10 y crea un vector de caracteres de largo 10 (pueden ser letras)
+
+    ```{r}
+    vector_1<- 1
+      
+    vector_2 <- 1
+
+    ```
+
+-   Crea una matriz
+
+    ```{r}
+    1
+    ```
+
+-   Crea un dataframe
+
+    ```{r}
+    1
+    ```
+
+¿Cuál es la principal diferencia entre una matriz (matrix) y un dataframe?
+
+> Respuesta aquí
+
+------------------------------------------------------------------------
+
+```{r}
+
+```
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Cmd+Option+I*.
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Cmd+Shift+K* to preview the HTML file).
+
+The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
+
+------------------------------------------------------------------------
+
+```{r}
+sessionInfo()
+```

@@ -43,7 +43,7 @@ galton
 galton <- mutate(galton, father = round(father*2.54, digits = 2))
 
 # podemos ver que usamos la función round dentro, para redondear a 2 digitos
-view(galton_2)
+view(galton)
 
 #mother
 galton <- mutate(galton, mother = round(mother*2.54, digits = 2))
@@ -168,7 +168,8 @@ boxplot(g$childHeight ~ g$sex,
 
 # madres
 # ??
-
+boxplot(g$mother,  main = "Gráfico de cajas Madres",
+        xlab = "Madres", ylab = "Altura")
 
 
 # Ahora de todo el dataset...
@@ -189,11 +190,13 @@ view(murders)
 # Relación entre población y total de asesinatos
 x <- murders$population / 10^6 # por 1 millón
 y <- murders$total
-plot(x, y)
+plot(x, y,
+     xlab= "population",
+     ylab= "total")
+
 
 # tambien puede ser 
 with(murders, plot(population, total))
-
 # e incluso...
 
 plot(murders$population, murders$total)
@@ -346,8 +349,10 @@ m_m5
 # Crea un grafico de barras o barplot de rate x estado 
 
 barplot( m_m5$rate, names.arg = m_m5$state,
-         main = "Estados", xlab = "Estado", ylab = "Frecuencia")
+         main = "Estados", xlab = "Estado", ylab = "Rate")
 
 
+# puedo copiar ejemplos y cambiar y los nombres de las variables, datasets y/o columnas
+# las funciones son replicables, puedo hacer lo mismo con otros datos
 
 

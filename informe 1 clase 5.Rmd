@@ -1,0 +1,52 @@
+---
+title: "Informe 1"
+output: html_notebook
+---
+
+**Cristian Baeza Torres**\
+*Martes 6 de Septiembre, 2022*
+
+Este es un notebook de [R Markdown](http://rmarkdown.rstudio.com). Cuando ejecutas el codigo en el notebook , los resultados apareceran bajo el bloque.
+
+```{r}
+library(tidyverse)
+library(dslabs)
+library(HistData)
+
+```
+
+Siempre es bueno comenzar el notebook con los paquetes que utilizaremos, si te fijas los bloques de R comienzan con **{r}**, si el bloque comienza con **{r, echo = TRUE}** mostrará el código, si en su lugar dice **FALSE**, no mostrara el código.
+
+Prueba clickeando el boton verde *Run* en el bloque o colocando tu cursos dentro y apretando *Ctrl+Shift+Enter* en Windows o *Cmd+Shift+Enter* en Mac.
+
+```{r, echo=TRUE}
+plot(cars)
+```
+
+Puedes añadir un nuevo bloque cliqueando el botón *Insert Chunk* en la barra de herramientas o presionando *Ctrl+alt+I* en W *Cmd+Option+I* en Mac.
+
+Cuando guardas el notebook, un archivo HTML que contiene el codigo y la salida de este será guardado junto al notebook (click en el botón *Preview* o presiona *ctrl+shift+k* o *Cmd+Shift+K* para previsualizar el archivo HTML).
+
+Este preview te muestra la copia en HTML renderizada del archivo en el editor. A diferencia de usar *Knit*, *Preview* no corre el codigo de los bloques. Solo muestra las salidas o outputs de los bloques si estos fueron corridos antes de previsualizarlo.
+
+En cada informe, al final se recomiendo usar el commando **sessionInfo()** para mostrar la versión de R y el sistema, así como los paquetes utilizados. Solo basta usar la función, tambien puede ser guardada como objeto e imprimir sin el locale.
+
+```{r}
+# basta con poner sessionInfo() o podemos guardarlo como objeto...
+sI <- sessionInfo()
+# podemos imprimirlo como sI
+# sI o print(sI)
+# Ahora sin mostrar el locale :
+  print(sI,  locale = FALSE)
+
+```
+
+En mi caso, yo prefiero usar el paquete sessioninfo, el cual realiza la misma función pero de manera más ordenada y estetica.
+
+```{r}
+library(sessioninfo)
+    session_info(
+      pkgs = c("attached"),
+      info = c("platform", "packages")
+)
+```
