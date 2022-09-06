@@ -9,6 +9,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
+<meta name="author" content="Cristian Baeza" />
 
 
 <title>Evaluación 1</title>
@@ -1763,6 +1764,7 @@ pre code {
 
 
 <h1 class="title toc-ignore">Evaluación 1</h1>
+<h4 class="author">Cristian Baeza</h4>
 
 </div>
 
@@ -1770,14 +1772,17 @@ pre code {
 <!-- rnb-text-begin -->
 <div id="análisis-de-datos-en-r-para-antropología" class="section level1">
 <h1>Análisis de datos en R para antropología</h1>
+<p>Nombre: (aquí y arriba donde dice author)</p>
+<p><em>Recuerda comentar tu código con</em> <strong>#</strong></p>
 <div id="paquetes-a-utilizar" class="section level3">
 <h3>Paquetes a utilizar</h3>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeSh0aWR5dmVyc2UpXG5saWJyYXJ5KGRzbGFicylcbmxpYnJhcnkoSGlzdERhdGEpXG5gYGAifQ== -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeSh0aWR5dmVyc2UpXG5saWJyYXJ5KGRzbGFicylcbmxpYnJhcnkoSGlzdERhdGEpXG5saWJyYXJ5KGtuaXRyKVxuYGBgIn0= -->
 <pre class="r"><code>library(tidyverse)
 library(dslabs)
-library(HistData)</code></pre>
+library(HistData)
+library(knitr)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -1828,8 +1833,8 @@ dataframe?</p>
 <div id="procesos" class="section level3">
 <h3>Procesos</h3>
 <ul>
-<li>Crea un vector númerico de un largo de 10 y crea un vector de
-caracteres de largo 10 (pueden ser letras)</li>
+<li>Abre el dataset iris y transformalo en tibble (guardado como
+objeto)</li>
 </ul>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
@@ -1842,7 +1847,7 @@ vector_2 &lt;- 1
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <ul>
-<li>Crea una matriz</li>
+<li>Visualiza el head de iris</li>
 </ul>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
@@ -1852,7 +1857,7 @@ vector_2 &lt;- 1
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <ul>
-<li>Crea un dataframe</li>
+<li>Visualiza el tail de iris</li>
 </ul>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
@@ -1861,25 +1866,140 @@ vector_2 &lt;- 1
 ```</code></pre>
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p>¿Cuál es la principal diferencia entre una matriz (matrix) y un
-dataframe?</p>
-<blockquote>
-<p>Respuesta aquí</p>
-</blockquote>
-<hr />
+<!-- -->
+<ul>
+<li>Visualiza el summary de iris</li>
+</ul>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<pre><code>```r
+1
+```</code></pre>
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<ul>
+<li>Describe el dataset de iris en comentarios (¿que contiene?, ¿qué
+es?) puedes usar el comando <strong>?</strong></li>
+</ul>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<pre><code>```r
+1
+# respuesta aquí
+```</code></pre>
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- -->
+<ul>
+<li>Calcula las medias de todas las variables numericas del
+dataset.</li>
+</ul>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<pre><code>```r
+1
+```</code></pre>
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<pre><code>------------------------------------------------------------------------
+
+### Gráficos</code></pre>
+<ul>
+<li>Haz un histograma</li>
+</ul>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<pre><code>```r
+1
+```</code></pre>
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<ul>
+<li>Haz un scatterplot entre Petal.Length y Petal.Width, colorea las
+especies</li>
+</ul>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<pre><code>```r
+1
+```</code></pre>
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- -->
+<ul>
+<li>haz boxplot de Petal.Length por especie</li>
+</ul>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<pre><code>```r
+1
+
+```</code></pre>
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<pre><code>------------------------------------------------------------------------
+
+### dplyr y manipulación de datos</code></pre>
+<ul>
+<li>Crea un subset de la especie setosa y ordenala en orden creciente
+por Sepal.Length</li>
+</ul>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<pre><code>```r
+1
+```</code></pre>
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<ul>
+<li>Crea un subset de la especie virginica y ordenala de manera
+decreciente por Petal.Length</li>
+</ul>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<pre><code>```r
+1
+```</code></pre>
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- -->
+<ul>
+<li>Crea una nueva variable de iris llamada Petal.Area que corresponde
+al área del petalo de las flores y guardala dentro del dataset</li>
+</ul>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<pre><code>```r
+1
+```</code></pre>
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<ul>
+<li>Calcula el summary de la variable Petal.Area y guardalo como
+objeto</li>
+</ul>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p>Add a new chunk by clicking the <em>Insert Chunk</em> button on the
-toolbar or by pressing <em>Cmd+Option+I</em>.</p>
-<p>When you save the notebook, an HTML file containing the code and
-output will be saved alongside it (click the <em>Preview</em> button or
-press <em>Cmd+Shift+K</em> to preview the HTML file).</p>
-<p>The preview shows you a rendered HTML copy of the contents of the
-editor. Consequently, unlike <em>Knit</em>, <em>Preview</em> does not
-run any R code chunks. Instead, the output of the chunk when it was last
-run in the editor is displayed.</p>
+<ul>
+<li>Crea una tabla que contenga el summary de Petal.Area como vimos en
+la clase 3.</li>
+</ul>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<ul>
+<li>muestrala con la función kable</li>
+</ul>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<pre><code>```r
+kable(1)
+```</code></pre>
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
 <hr />
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
@@ -1890,7 +2010,7 @@ run in the editor is displayed.</p>
 </div>
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiRXZhbHVhY2nDs24gMSIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKIyBBbsOhbGlzaXMgZGUgZGF0b3MgZW4gUiBwYXJhIGFudHJvcG9sb2fDrWEKCiMjIyBQYXF1ZXRlcyBhIHV0aWxpemFyCgpgYGB7ciwgZWNobz1UUlVFLCBpbmNsdWRlPVRSVUV9CmxpYnJhcnkodGlkeXZlcnNlKQpsaWJyYXJ5KGRzbGFicykKbGlicmFyeShIaXN0RGF0YSkKYGBgCgojIyMgUiBiYXNpY286IE9iamV0b3MKCi0gICBDcmVhIHVuIHZlY3RvciBuw7ptZXJpY28gZGUgdW4gbGFyZ28gZGUgMTAgeSBjcmVhIHVuIHZlY3RvciBkZSBjYXJhY3RlcmVzIGRlIGxhcmdvIDEwIChwdWVkZW4gc2VyIGxldHJhcykKCiAgICBgYGB7cn0KICAgIHZlY3Rvcl8xPC0gMQogICAgICAKICAgIHZlY3Rvcl8yIDwtIDEKCiAgICBgYGAKCi0gICBDcmVhIHVuYSBtYXRyaXoKCiAgICBgYGB7cn0KICAgIDEKICAgIGBgYAoKLSAgIENyZWEgdW4gZGF0YWZyYW1lCgogICAgYGBge3J9CiAgICAxCiAgICBgYGAKCsK/Q3XDoWwgZXMgbGEgcHJpbmNpcGFsIGRpZmVyZW5jaWEgZW50cmUgdW5hIG1hdHJpeiAobWF0cml4KSB5IHVuIGRhdGFmcmFtZT8KCj4gUmVzcHVlc3RhIGFxdcOtCgotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KCiMjIyBQcm9jZXNvcwoKLSAgIENyZWEgdW4gdmVjdG9yIG7Dum1lcmljbyBkZSB1biBsYXJnbyBkZSAxMCB5IGNyZWEgdW4gdmVjdG9yIGRlIGNhcmFjdGVyZXMgZGUgbGFyZ28gMTAgKHB1ZWRlbiBzZXIgbGV0cmFzKQoKICAgIGBgYHtyfQogICAgdmVjdG9yXzE8LSAxCiAgICAgIAogICAgdmVjdG9yXzIgPC0gMQoKICAgIGBgYAoKLSAgIENyZWEgdW5hIG1hdHJpegoKICAgIGBgYHtyfQogICAgMQogICAgYGBgCgotICAgQ3JlYSB1biBkYXRhZnJhbWUKCiAgICBgYGB7cn0KICAgIDEKICAgIGBgYAoKwr9DdcOhbCBlcyBsYSBwcmluY2lwYWwgZGlmZXJlbmNpYSBlbnRyZSB1bmEgbWF0cml6IChtYXRyaXgpIHkgdW4gZGF0YWZyYW1lPwoKPiBSZXNwdWVzdGEgYXF1w60KCi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQoKYGBge3J9CgpgYGAKCkFkZCBhIG5ldyBjaHVuayBieSBjbGlja2luZyB0aGUgKkluc2VydCBDaHVuayogYnV0dG9uIG9uIHRoZSB0b29sYmFyIG9yIGJ5IHByZXNzaW5nICpDbWQrT3B0aW9uK0kqLgoKV2hlbiB5b3Ugc2F2ZSB0aGUgbm90ZWJvb2ssIGFuIEhUTUwgZmlsZSBjb250YWluaW5nIHRoZSBjb2RlIGFuZCBvdXRwdXQgd2lsbCBiZSBzYXZlZCBhbG9uZ3NpZGUgaXQgKGNsaWNrIHRoZSAqUHJldmlldyogYnV0dG9uIG9yIHByZXNzICpDbWQrU2hpZnQrSyogdG8gcHJldmlldyB0aGUgSFRNTCBmaWxlKS4KClRoZSBwcmV2aWV3IHNob3dzIHlvdSBhIHJlbmRlcmVkIEhUTUwgY29weSBvZiB0aGUgY29udGVudHMgb2YgdGhlIGVkaXRvci4gQ29uc2VxdWVudGx5LCB1bmxpa2UgKktuaXQqLCAqUHJldmlldyogZG9lcyBub3QgcnVuIGFueSBSIGNvZGUgY2h1bmtzLiBJbnN0ZWFkLCB0aGUgb3V0cHV0IG9mIHRoZSBjaHVuayB3aGVuIGl0IHdhcyBsYXN0IHJ1biBpbiB0aGUgZWRpdG9yIGlzIGRpc3BsYXllZC4KCi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQoKYGBge3J9CnNlc3Npb25JbmZvKCkKYGBgCg==</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiRXZhbHVhY2nDs24gMSIKYXV0aG9yOiBDcmlzdGlhbiBCYWV6YQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sKLS0tCgojIEFuw6FsaXNpcyBkZSBkYXRvcyBlbiBSIHBhcmEgYW50cm9wb2xvZ8OtYQoKTm9tYnJlOiAoYXF1w60geSBhcnJpYmEgZG9uZGUgZGljZSBhdXRob3IpCgoqUmVjdWVyZGEgY29tZW50YXIgdHUgY8OzZGlnbyBjb24qICoqXCMqKgoKIyMjIFBhcXVldGVzIGEgdXRpbGl6YXIKCmBgYHtyLCBlY2hvPVRSVUUsIGluY2x1ZGU9VFJVRX0KbGlicmFyeSh0aWR5dmVyc2UpCmxpYnJhcnkoZHNsYWJzKQpsaWJyYXJ5KEhpc3REYXRhKQpsaWJyYXJ5KGtuaXRyKQpgYGAKCiMjIyBSIGJhc2ljbzogT2JqZXRvcwoKLSAgIENyZWEgdW4gdmVjdG9yIG7Dum1lcmljbyBkZSB1biBsYXJnbyBkZSAxMCB5IGNyZWEgdW4gdmVjdG9yIGRlIGNhcmFjdGVyZXMgZGUgbGFyZ28gMTAgKHB1ZWRlbiBzZXIgbGV0cmFzKQoKICAgIGBgYHtyfQogICAgdmVjdG9yXzE8LSAxCiAgICAgIAogICAgdmVjdG9yXzIgPC0gMQoKICAgIGBgYAoKLSAgIENyZWEgdW5hIG1hdHJpegoKICAgIGBgYHtyfQogICAgMQogICAgYGBgCgotICAgQ3JlYSB1biBkYXRhZnJhbWUKCiAgICBgYGB7cn0KICAgIDEKICAgIGBgYAoKwr9DdcOhbCBlcyBsYSBwcmluY2lwYWwgZGlmZXJlbmNpYSBlbnRyZSB1bmEgbWF0cml6IChtYXRyaXgpIHkgdW4gZGF0YWZyYW1lPwoKPiBSZXNwdWVzdGEgYXF1w60KCi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQoKIyMjIFByb2Nlc29zCgotICAgQWJyZSBlbCBkYXRhc2V0IGlyaXMgeSB0cmFuc2Zvcm1hbG8gZW4gdGliYmxlIChndWFyZGFkbyBjb21vIG9iamV0bykKCiAgICBgYGB7cn0KICAgIHZlY3Rvcl8xPC0gMQogICAgICAKICAgIHZlY3Rvcl8yIDwtIDEKCiAgICBgYGAKCi0gICBWaXN1YWxpemEgZWwgaGVhZCBkZSBpcmlzCgogICAgYGBge3J9CiAgICAxCiAgICBgYGAKCi0gICBWaXN1YWxpemEgZWwgdGFpbCBkZSBpcmlzCgogICAgYGBge3J9CiAgICAxCiAgICBgYGAKCmBgYHs9aHRtbH0KPCEtLSAtLT4KYGBgCi0gICBWaXN1YWxpemEgZWwgc3VtbWFyeSBkZSBpcmlzCgogICAgYGBge3J9CiAgICAxCiAgICBgYGAKCi0gICBEZXNjcmliZSBlbCBkYXRhc2V0IGRlIGlyaXMgZW4gY29tZW50YXJpb3MgKMK/cXVlIGNvbnRpZW5lPywgwr9xdcOpIGVzPykgcHVlZGVzIHVzYXIgZWwgY29tYW5kbyAqKj8qKgoKICAgIGBgYHtyfQogICAgMQogICAgIyByZXNwdWVzdGEgYXF1w60KICAgIGBgYAoKYGBgez1odG1sfQo8IS0tIC0tPgpgYGAKLSAgIENhbGN1bGEgbGFzIG1lZGlhcyBkZSB0b2RhcyBsYXMgdmFyaWFibGVzIG51bWVyaWNhcyBkZWwgZGF0YXNldC4KCiAgICBgYGB7cn0KICAgIDEKICAgIGBgYAoKICAgIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQoKICAgICMjIyBHcsOhZmljb3MKCi0gICBIYXogdW4gaGlzdG9ncmFtYQoKICAgIGBgYHtyfQogICAgMQogICAgYGBgCgotICAgSGF6IHVuIHNjYXR0ZXJwbG90IGVudHJlIFBldGFsLkxlbmd0aCB5IFBldGFsLldpZHRoLCBjb2xvcmVhIGxhcyBlc3BlY2llcwoKICAgIGBgYHtyfQogICAgMQogICAgYGBgCgpgYGB7PWh0bWx9CjwhLS0gLS0+CmBgYAotICAgaGF6IGJveHBsb3QgZGUgUGV0YWwuTGVuZ3RoIHBvciBlc3BlY2llCgogICAgYGBge3J9CiAgICAxCgogICAgYGBgCgogICAgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCgogICAgIyMjIGRwbHlyIHkgbWFuaXB1bGFjacOzbiBkZSBkYXRvcwoKLSAgIENyZWEgdW4gc3Vic2V0IGRlIGxhIGVzcGVjaWUgc2V0b3NhIHkgb3JkZW5hbGEgZW4gb3JkZW4gY3JlY2llbnRlIHBvciBTZXBhbC5MZW5ndGgKCiAgICBgYGB7cn0KICAgIDEKICAgIGBgYAoKLSAgIENyZWEgdW4gc3Vic2V0IGRlIGxhIGVzcGVjaWUgdmlyZ2luaWNhIHkgb3JkZW5hbGEgZGUgbWFuZXJhIGRlY3JlY2llbnRlIHBvciBQZXRhbC5MZW5ndGgKCiAgICBgYGB7cn0KICAgIDEKICAgIGBgYAoKYGBgez1odG1sfQo8IS0tIC0tPgpgYGAKLSAgIENyZWEgdW5hIG51ZXZhIHZhcmlhYmxlIGRlIGlyaXMgbGxhbWFkYSBQZXRhbC5BcmVhIHF1ZSBjb3JyZXNwb25kZSBhbCDDoXJlYSBkZWwgcGV0YWxvIGRlIGxhcyBmbG9yZXMgeSBndWFyZGFsYSBkZW50cm8gZGVsIGRhdGFzZXQKCiAgICBgYGB7cn0KICAgIDEKICAgIGBgYAoKLSAgIENhbGN1bGEgZWwgc3VtbWFyeSBkZSBsYSB2YXJpYWJsZSBQZXRhbC5BcmVhIHkgZ3VhcmRhbG8gY29tbyBvYmpldG8KCiAgICBgYGB7cn0KCiAgICBgYGAKCi0gICBDcmVhIHVuYSB0YWJsYSBxdWUgY29udGVuZ2EgZWwgc3VtbWFyeSBkZSBQZXRhbC5BcmVhIGNvbW8gdmltb3MgZW4gbGEgY2xhc2UgMy4KCiAgICBgYGB7cn0KCiAgICBgYGAKCi0gICBtdWVzdHJhbGEgY29uIGxhIGZ1bmNpw7NuIGthYmxlCgogICAgYGBge3J9CiAgICBrYWJsZSgxKQogICAgYGBgCgotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KCmBgYHtyfQpzZXNzaW9uSW5mbygpCmBgYAo=</div>
 
 
 

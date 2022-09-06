@@ -1,9 +1,14 @@
 ---
 title: "Evaluación 1"
+author: Cristian Baeza
 output: html_notebook
 ---
 
 # Análisis de datos en R para antropología
+
+Nombre: (aquí y arriba donde dice author)
+
+*Recuerda comentar tu código con* **\#**
 
 ### Paquetes a utilizar
 
@@ -11,6 +16,7 @@ output: html_notebook
 library(tidyverse)
 library(dslabs)
 library(HistData)
+library(knitr)
 ```
 
 ### R basico: Objetos
@@ -44,7 +50,7 @@ library(HistData)
 
 ### Procesos
 
--   Crea un vector númerico de un largo de 10 y crea un vector de caracteres de largo 10 (pueden ser letras)
+-   Abre el dataset iris y transformalo en tibble (guardado como objeto)
 
     ```{r}
     vector_1<- 1
@@ -53,33 +59,111 @@ library(HistData)
 
     ```
 
--   Crea una matriz
+-   Visualiza el head de iris
 
     ```{r}
     1
     ```
 
--   Crea un dataframe
+-   Visualiza el tail de iris
 
     ```{r}
     1
     ```
 
-¿Cuál es la principal diferencia entre una matriz (matrix) y un dataframe?
-
-> Respuesta aquí
-
-------------------------------------------------------------------------
-
-```{r}
-
+```{=html}
+<!-- -->
 ```
+-   Visualiza el summary de iris
 
-Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Cmd+Option+I*.
+    ```{r}
+    1
+    ```
 
-When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Cmd+Shift+K* to preview the HTML file).
+-   Describe el dataset de iris en comentarios (¿que contiene?, ¿qué es?) puedes usar el comando **?**
 
-The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
+    ```{r}
+    1
+    # respuesta aquí
+    ```
+
+```{=html}
+<!-- -->
+```
+-   Calcula las medias de todas las variables numericas del dataset.
+
+    ```{r}
+    1
+    ```
+
+    ------------------------------------------------------------------------
+
+    ### Gráficos
+
+-   Haz un histograma
+
+    ```{r}
+    1
+    ```
+
+-   Haz un scatterplot entre Petal.Length y Petal.Width, colorea las especies
+
+    ```{r}
+    1
+    ```
+
+```{=html}
+<!-- -->
+```
+-   haz boxplot de Petal.Length por especie
+
+    ```{r}
+    1
+
+    ```
+
+    ------------------------------------------------------------------------
+
+    ### dplyr y manipulación de datos
+
+-   Crea un subset de la especie setosa y ordenala en orden creciente por Sepal.Length
+
+    ```{r}
+    1
+    ```
+
+-   Crea un subset de la especie virginica y ordenala de manera decreciente por Petal.Length
+
+    ```{r}
+    1
+    ```
+
+```{=html}
+<!-- -->
+```
+-   Crea una nueva variable de iris llamada Petal.Area que corresponde al área del petalo de las flores y guardala dentro del dataset
+
+    ```{r}
+    1
+    ```
+
+-   Calcula el summary de la variable Petal.Area y guardalo como objeto
+
+    ```{r}
+
+    ```
+
+-   Crea una tabla que contenga el summary de Petal.Area como vimos en la clase 3.
+
+    ```{r}
+
+    ```
+
+-   muestrala con la función kable
+
+    ```{r}
+    kable(1)
+    ```
 
 ------------------------------------------------------------------------
 
