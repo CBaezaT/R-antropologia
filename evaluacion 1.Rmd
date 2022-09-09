@@ -13,7 +13,7 @@ Nombre: (aquí y arriba donde dice author)
 ### Paquetes a utilizar
 
 ```{r, echo=TRUE, include=TRUE}
-library(tidyverse)
+library(tidyverse) # abrir paquete tidyverse
 library(dslabs)
 library(HistData)
 library(knitr)
@@ -39,7 +39,14 @@ library(knitr)
 -   Crea un dataframe
 
     ```{r}
-    1
+    nombres <-c("Laura", "Andrea","Teresa")
+    df_1 <-cbind(nombres, matrix_1)
+    df_1
+    class(df_1)
+    df_2 <-c(50, 25, 4)
+    df_2 <-data.frame(edad, matrix_1)
+    df_2
+    class(df_2)
     ```
 
 ¿Cuál es la principal diferencia entre una matriz (matrix) y un dataframe?
@@ -71,9 +78,8 @@ library(knitr)
     1
     ```
 
-```{=html}
 <!-- -->
-```
+
 -   Visualiza el summary de iris
 
     ```{r}
@@ -87,9 +93,8 @@ library(knitr)
     # respuesta aquí
     ```
 
-```{=html}
 <!-- -->
-```
+
 -   Calcula las medias de todas las variables numericas del dataset.
 
     ```{r}
@@ -112,9 +117,8 @@ library(knitr)
     1
     ```
 
-```{=html}
 <!-- -->
-```
+
 -   haz boxplot de Petal.Length por especie
 
     ```{r}
@@ -138,9 +142,8 @@ library(knitr)
     1
     ```
 
-```{=html}
 <!-- -->
-```
+
 -   Crea una nueva variable de iris llamada Petal.Area que corresponde al área del petalo de las flores y guardala dentro del dataset
 
     ```{r}
