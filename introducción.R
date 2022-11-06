@@ -8,7 +8,7 @@ install.packages("tidyverse")
 
 #llamamos un paquete a nuestro entorno
 library(tidyverse)
-library(data)
+library(HistData)
 
 # nuestro entorno o directorio de trabajo
 getwd()
@@ -69,7 +69,7 @@ vector_1 <- c(1, 2, 3, 4, 5)
 is.vector(vector_1)
 length(vector_1)
 
-vector_2 <- c("humero", "randio", "ulna", "femur", "tibia", "fibula")
+vector_2 <- c("humero", "radio", "ulna", "femur", "tibia", "fibula")
 is.vector(vector_2)
 length(vector_2)
 
@@ -130,8 +130,9 @@ colnames(df_2)
 df_2
 class(df_2$alumno)
 class(df_2$nota_1)
-
-
+df_2$alumno
+alumno <- df_2$alumno
+alumno
 
 # Bases de datos #####
 # bases de datos en paquetes

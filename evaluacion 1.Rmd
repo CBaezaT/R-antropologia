@@ -1,6 +1,6 @@
 ---
 title: "Evaluación 1"
-author: Cristian Baeza
+author: "Cristian Baeza"
 output: html_notebook
 ---
 
@@ -23,31 +23,35 @@ library(knitr)
 
 -   Crea un vector númerico de un largo de 10 y crea un vector de caracteres de largo 10 (pueden ser letras)
 
-    ```{r}
-    vector_1<- 1
-      
-    vector_2 <- 1
+```{r}
+    # vector numerico
+    vector_1<- c(1:10)
+    vector_1
+    # vector caracteres 
+    vector_2 <- c("humero", "radio", "ulna", "femur", "tibia", "fibula")
+    vector_2
+```
 
-    ```
+
 
 -   Crea una matriz
 
-    ```{r}
-    1
-    ```
+```{r}
+matrix_1 <-matrix(1:20, 4,5) # creo una matriz de 4 filas y 5 columnas 
+matrix_1
+```
 
 -   Crea un dataframe
 
-    ```{r}
+```{r}
     nombres <-c("Laura", "Andrea","Teresa")
     df_1 <-cbind(nombres, matrix_1)
     df_1
     class(df_1)
-    df_2 <-c(50, 25, 4)
-    df_2 <-data.frame(edad, matrix_1)
-    df_2
-    class(df_2)
-    ```
+    data.frame(df_1)
+      
+
+```
 
 ¿Cuál es la principal diferencia entre una matriz (matrix) y un dataframe?
 
@@ -59,47 +63,45 @@ library(knitr)
 
 -   Abre el dataset iris y transformalo en tibble (guardado como objeto)
 
-    ```{r}
-    vector_1<- 1
-      
-    vector_2 <- 1
-
-    ```
+```{r}
+iris <- tibble(iris)
+```
 
 -   Visualiza el head de iris
+```{r}
+head(iris)
+```
 
-    ```{r}
-    1
-    ```
 
 -   Visualiza el tail de iris
 
-    ```{r}
-    1
-    ```
+```{r}
+tail(iris)
+```
 
-<!-- -->
 
 -   Visualiza el summary de iris
 
-    ```{r}
-    1
-    ```
+```{r}
+summary(iris)
+```
+
 
 -   Describe el dataset de iris en comentarios (¿que contiene?, ¿qué es?) puedes usar el comando **?**
 
-    ```{r}
-    1
-    # respuesta aquí
-    ```
-
-<!-- -->
+```{r}
+# tu respuesta aquí
+```
 
 -   Calcula las medias de todas las variables numericas del dataset.
 
-    ```{r}
-    1
-    ```
+
+```{r}
+mean(iris$Sepal.Length)
+mean(iris$Sepal.Width)
+mean(iris$Petal.Length)
+mean(iris$Petal.Width)
+```
 
     ------------------------------------------------------------------------
 
@@ -107,24 +109,26 @@ library(knitr)
 
 -   Haz un histograma
 
-    ```{r}
-    1
-    ```
+```{r}
+# función o forma de hacer un histograma simple, en este caso Sepal.Lenght.
+    hist(iris$Sepal.Length, main = "Sepal.Length")
+```
 
 -   Haz un scatterplot entre Petal.Length y Petal.Width, colorea las especies
 
-    ```{r}
-    1
-    ```
+```{r}
+    plot(iris$Petal.Length, iris$Petal.Width, col = iris$Species)
+```
 
-<!-- -->
+
+
 
 -   haz boxplot de Petal.Length por especie
 
-    ```{r}
-    1
+```{r}
+boxplot(data = iris,Petal.Length~Species)
+```
 
-    ```
 
     ------------------------------------------------------------------------
 
@@ -132,41 +136,53 @@ library(knitr)
 
 -   Crea un subset de la especie setosa y ordenala en orden creciente por Sepal.Length
 
-    ```{r}
-    1
-    ```
+```{r}
+setosa <- iris %>% filter(Species == "setosa") %>% arrange(Sepal.Length)
+setosa
+```
+
 
 -   Crea un subset de la especie virginica y ordenala de manera decreciente por Petal.Length
 
-    ```{r}
-    1
-    ```
+```{r}
+1
+```
 
-<!-- -->
 
 -   Crea una nueva variable de iris llamada Petal.Area que corresponde al área del petalo de las flores y guardala dentro del dataset
 
-    ```{r}
-    1
-    ```
+```{r}
+ iris <-iris %>% mutate(Petal.Area = Petal.Length * Petal.Width)
+```
+
 
 -   Calcula el summary de la variable Petal.Area y guardalo como objeto
 
-    ```{r}
+```{r}
+sum_PA <- summary(iris$Petal.Area)
+    sum_PA
+```
 
-    ```
 
 -   Crea una tabla que contenga el summary de Petal.Area como vimos en la clase 3.
 
-    ```{r}
+```{r}
+  petal.area <- c("petal.area")
+    sum_PA <- summary(iris$Petal.Area) # summary de iris$Petal.Area como objeto
+    tab_1 <- as.data.frame(rbind( as.numeric(sum_PA))) # crear dataframe
+    tab_1<-round(tab_1, digits = 2) # redondear decimales a 2
+    colnames(tab_1) <- names(sum_PA)
+    tab_1 <- cbind(petal.area, tab_1)
+    tab_1 # guardado como dataframe
+```
 
-    ```
 
 -   muestrala con la función kable
 
-    ```{r}
-    kable(1)
-    ```
+```{r}
+    kable(tab_1) # visualizo tabla con la función kable 
+```
+
 
 ------------------------------------------------------------------------
 

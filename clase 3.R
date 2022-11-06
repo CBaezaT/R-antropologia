@@ -105,7 +105,7 @@ g <- galton
 
 # R base nos permite realizar gráficos, en este caso usaremos histogramas para ver la distribución y su  media
 # padres
-hist(g$father, main = "Padres", breaks = 30)
+hist(g$father, main = "Padres")
 abline(v=mean(g$father), col=2, lwd=2)
 
 hist(g$childHeight[g$sex=="male"], main = "Hijos", breaks = 30)
